@@ -16,25 +16,15 @@ const User = require("./models/UersSchema");
 
 // Database connection 
 
-let isConnected = false;
-
-async function connectToDatabase() {
 
   connectDB();
-}
+
 
 const PORT = process.env.PORT || 5000;
 
 // Middleware
 
-app.use((req, res, next) => {
 
-  if (!isConnected) {
-    connectToDatabase();
-
-  }
-  next();
-})
 const cors = require('cors');
 
 app.use(cors({
@@ -95,9 +85,9 @@ app.get('/api', (req, res) => {
 
 });
 
-// Upload Folder
-// app.listen(PORT, () => {
-//   console.log(`Server ${PORT} par chal raha hai`);
-// });
+Upload Folder
+app.listen(PORT, () => {
+  console.log(`Server ${PORT} par chal raha hai`);
+});
 
-module.exports = app
+
