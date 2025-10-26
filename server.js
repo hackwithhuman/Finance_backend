@@ -89,10 +89,10 @@ app.use('/api/dashboard', dashBoardroutes);
 //   }
 
 // })
-// app.get('/api', (req, res) => {
-//   res.send('Chal Raha hai...');
+app.get('/api', (req, res) => {
+  res.send('Chal Raha hai...');
 
-// });
+});
 
 // Upload Folder
 // app.listen(PORT, () => {
