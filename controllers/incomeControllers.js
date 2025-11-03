@@ -37,7 +37,7 @@ exports.addIncome = async (req, res) => {
 exports.getIncomes = async (req, res) => {
     try {
         const id = req.user.id;
-        const incomes = await Income.find({ userID:id }).sort({ date: -1 });
+        const incomes = await Income.find({ userId:id }).sort({ date: -1 });
         if (!incomes || incomes.length === 0) {
             return res.status(404).json({ message: 'No incomes found' });
         }
